@@ -1,80 +1,106 @@
+<!-- Deklarasi DOCTYPE HTML5 - memberitahu browser bahwa dokumen ini adalah HTML versi terbaru -->
 <!DOCTYPE html> 
-<!-- Mendefinisikan bahwa ini adalah dokumen HTML5 -->
 
+<!-- Tag pembuka HTML dengan atribut lang="id" - menentukan bahasa dokumen adalah Indonesia -->
 <html lang="id">
-<!-- Elemen root HTML, bahasa Indonesia -->
 
+<!-- Bagian head (kepala) dokumen - berisi metadata dan konfigurasi halaman (tidak ditampilkan di halaman) -->
 <head>
+    <!-- Menentukan charset UTF-8 untuk mendukung karakter Indonesia dan simbol internasional lainnya -->
     <meta charset="UTF-8">
-    <!-- Encoding karakter agar mendukung semua huruf & simbol -->
-
+    
+    <!-- Viewport meta tag untuk membuat halaman responsif di perangkat mobile, tablet, dan desktop -->
+    <!-- width=device-width: lebar viewport sesuai dengan lebar perangkat -->
+    <!-- initial-scale=1.0: zoom awal 100% tanpa zoom otomatis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Agar responsive di semua device -->
 
+    <!-- Judul halaman yang muncul di tab browser dan bookmark -->
+    <!-- Judul ini penting untuk SEO dan user experience -->
     <title>Faishal Zaky | Front-End Developer</title>
-    <!-- Judul yang muncul di tab browser -->
 
+    <!-- Menghubungkan file CSS eksternal (style.css) ke dokumen HTML -->
+    <!-- rel="stylesheet": menentukan hubungan bahwa ini adalah stylesheet -->
+    <!-- href="style.css": path ke file CSS yang akan digunakan -->
     <link rel="stylesheet" href="style.css">
-    <!-- Menghubungkan file CSS -->
 </head>
 
+<!-- Awal tag body - semua konten visual website berada di dalam elemen ini -->
 <body>
-    <!-- Semua konten website berada di dalam body -->
-
+    <!-- Komentar divider untuk memisahkan bagian header dari bagian lain (untuk kerapian kode) -->
     <!-- ================= HEADER ================= -->
+    
+    <!-- Elemen header - bagian atas website yang biasanya berisi logo dan menu navigasi -->
     <header>
-        <!-- Bagian atas website (logo & navigasi) -->
-
+        
+        <!-- Heading level 1 - nama utama yang berfungsi sebagai branding/identitas website -->
+        <!-- Ini adalah elemen paling penting di halaman (hanya satu per halaman) -->
         <h1>Faishal Zaky</h1>
-        <!-- Nama utama sebagai branding -->
 
+        <!-- Elemen nav (navigation) - bagian untuk menu navigasi website -->
+        <!-- Secara semantik menunjukkan bahwa ini adalah area navigasi -->
         <nav>
-            <!-- Navigasi website -->
-
+            
+            <!-- Unordered list (ul) - daftar tidak berurutan untuk menu navigasi -->
+            <!-- Lebih semantik daripada div biasa -->
             <ul>
-                <!-- List menu navigasi -->
-
+                
+                <!-- List item pertama berisi hyperlink ke section About -->
+                <!-- href="#about": mengarahkan ke elemen dengan id="about" di halaman yang sama -->
+                <!-- # berarti anchor internal (navigasi dalam satu halaman) -->
                 <li><a href="#about">About</a></li>
-                <!-- Link menuju section About -->
 
+                <!-- List item kedua - link ke section Skills -->
                 <li><a href="#skills">Skills</a></li>
-                <!-- Link menuju section Skills -->
 
+                <!-- List item ketiga - link ke section Projects -->
                 <li><a href="#projects">Projects</a></li>
-                <!-- Link menuju section Projects -->
 
+                <!-- List item keempat - link ke section Contact -->
                 <li><a href="#contact">Contact</a></li>
-                <!-- Link menuju section Contact -->
             </ul>
         </nav>
     </header>
 
+    <!-- Divider untuk memisahkan bagian main content -->
     <!-- ================= MAIN CONTENT ================= -->
+    
+    <!-- Elemen main - menandai konten utama/pokok dari halaman -->
+    <!-- Lebih semantik daripada menggunakan div -->
     <main>
-        <!-- Konten utama website -->
-
+        
         <!-- ===== HERO SECTION ===== -->
+        <!-- Section ini adalah perkenalan/pembukaan dengan tagline utama -->
+        
+        <!-- Elemen section dengan id="hero" -->
+        <!-- id digunakan untuk anchor link navigasi dari menu di atas -->
         <section id="hero">
-            <!-- Section pembuka / perkenalan -->
-
+            
+            <!-- Heading level 2 - tagline/judul subjek utama halaman -->
+            <!-- Ini adalah headline yang menarik perhatian visitor -->
             <h2>Front-End Developer</h2>
-            <!-- Subjudul -->
 
+            <!-- Paragraf dengan deskripsi singkat tentang peran/layanan yang ditawarkan -->
+            <!-- Teks ini berisi value proposition yang menarik klien/visitor -->
             <p>
                 Saya membangun website modern, responsif, dan user-friendly.
             </p>
-            <!-- Deskripsi singkat -->
         </section>
 
         <!-- ===== ABOUT SECTION ===== -->
+        <!-- Section tentang diri sendiri - memberikan background dan informasi personal -->
+        
+        <!-- Section dengan id="about" untuk navigasi dari menu -->
         <section id="about">
-            <!-- Section tentang diri -->
-
+            
+            <!-- Heading level 2 untuk judul section -->
             <h2>About Me</h2>
 
+            <!-- Elemen article - menandai konten artikel/tulisan yang mandiri dan reusable -->
+            <!-- Lebih semantik daripada div biasa untuk konten artikel -->
             <article>
-                <!-- Article untuk konten mandiri -->
-
+                
+                <!-- Paragraf berisi biodata/pengenalan diri yang diperluas -->
+                <!-- Memberikan informasi detail tentang skill dan fokus profesional -->
                 <p>
                     Saya adalah seorang Front-End Developer yang fokus pada
                     pengembangan website menggunakan HTML, CSS, dan JavaScript.
@@ -84,35 +110,71 @@
         </section>
 
         <!-- ===== SKILLS SECTION ===== -->
+        <!-- Section yang menampilkan list keahlian/skill teknis yang dimiliki -->
+        
+        <!-- Section dengan id="skills" untuk navigasi dari menu -->
         <section id="skills">
+            
+            <!-- Heading level 2 untuk judul section Skills -->
             <h2>Skills</h2>
 
+            <!-- Unordered list (ul) untuk menampilkan daftar skill -->
+            <!-- Menggunakan list lebih semantik daripada text biasa -->
             <ul>
-                <!-- List skill -->
-
+                
+                <!-- List item: HTML5 - markup language untuk struktur halaman -->
                 <li>HTML5</li>
+
+                <!-- List item: CSS3 - styling dan layout halaman web -->
                 <li>CSS3</li>
+
+                <!-- List item: JavaScript - bahasa pemrograman untuk interaktivitas -->
                 <li>JavaScript</li>
+
+                <!-- List item: Responsive Design - membuat desain yang adaptif di berbagai ukuran layar -->
                 <li>Responsive Design</li>
+
+                <!-- List item: Git & GitHub - version control dan platform kolaborasi kode -->
                 <li>Git & GitHub</li>
             </ul>
         </section>
 
         <!-- ===== PROJECTS SECTION ===== -->
+        <!-- Section yang menampilkan portofolio/proyek-proyek yang telah dibuat -->
+        
+        <!-- Section dengan id="projects" untuk navigasi dari menu -->
         <section id="projects">
+            
+            <!-- Heading level 2 untuk judul section Projects -->
             <h2>Projects</h2>
 
+            <!-- Divider komentar untuk proyek pertama (untuk organisasi kode) -->
             <!-- Project 1 -->
+            
+            <!-- Elemen article untuk proyek pertama - konten artikel independen -->
             <article>
+                
+                <!-- Heading level 3 untuk judul proyek -->
+                <!-- Level 3 karena ini sub-judul di bawah section yang adalah level 2 -->
                 <h3>Landing Page Product</h3>
+                
+                <!-- Paragraf berisi deskripsi singkat tentang proyek tersebut -->
+                <!-- Menjelaskan apa yang dibuat dan fitur utamanya -->
                 <p>
                     Website promosi produk dengan desain modern dan responsive.
                 </p>
             </article>
 
+            <!-- Divider komentar untuk proyek kedua -->
             <!-- Project 2 -->
+            
+            <!-- Elemen article untuk proyek kedua -->
             <article>
+                
+                <!-- Heading level 3 untuk judul proyek kedua -->
                 <h3>Website Portfolio</h3>
+                
+                <!-- Paragraf berisi deskripsi singkat proyek kedua -->
                 <p>
                     Website pribadi untuk menampilkan skill dan project.
                 </p>
@@ -120,39 +182,84 @@
         </section>
 
         <!-- ===== CONTACT SECTION ===== -->
+        <!-- Section untuk komunikasi/kontak - berisi form untuk visitor mengirim pesan -->
+        
+        <!-- Section dengan id="contact" untuk navigasi dari menu -->
         <section id="contact">
+            
+            <!-- Heading level 2 untuk judul section Contact -->
             <h2>Contact Me</h2>
 
+            <!-- Elemen form untuk mengumpulkan input dari user -->
+            <!-- Form ini membutuhkan backend/server untuk memproses data yang dikirim -->
             <form>
-                <!-- Form kontak -->
-
+                
+                <!-- Label untuk input nama -->
+                <!-- atribut for="name" menghubungkan label dengan input berdasarkan id -->
                 <label for="name">Nama:</label>
+                
+                <!-- Input text untuk menerima nama dari user -->
+                <!-- type="text": tipe input untuk text biasa -->
+                <!-- id="name": identitas unik untuk elemen ini (harus unik dalam halaman) -->
+                <!-- name="name": nama field yang akan dikirim ke server -->
+                <!-- required: atribut validasi HTML5 - field tidak boleh kosong saat submit -->
                 <input type="text" id="name" name="name" required>
 
+                <!-- Break line (line break) untuk memberi jarak vertikal antara field -->
+                <!-- Digunakan dua kali untuk memberi jarak yang lebih besar -->
                 <br><br>
 
+                <!-- Label untuk input email -->
+                <!-- atribut for="email" menghubungkan dengan input berdasarkan id -->
                 <label for="email">Email:</label>
+                
+                <!-- Input email untuk menerima alamat email dari user -->
+                <!-- type="email": tipe input spesial untuk email dengan validasi format email otomatis -->
+                <!-- Browser akan otomatis mengecek apakah input valid sebagai email -->
+                <!-- required: field wajib diisi dan harus format email yang valid -->
                 <input type="email" id="email" name="email" required>
 
+                <!-- Jarak vertikal antara field email dan message -->
                 <br><br>
 
+                <!-- Label untuk textarea pesan -->
+                <!-- atribut for="message" menghubungkan dengan textarea berdasarkan id -->
                 <label for="message">Pesan:</label>
+                
+                <!-- Textarea untuk input teks panjang/multi-baris -->
+                <!-- id="message": identitas unik untuk elemen ini -->
+                <!-- name="message": nama field yang akan dikirim ke server -->
+                <!-- rows="4": menentukan jumlah baris yang ditampilkan (tinggi default textarea) -->
+                <!-- required: field wajib diisi sebelum form dapat disubmit -->
                 <textarea id="message" name="message" rows="4" required></textarea>
 
+                <!-- Jarak vertikal sebelum tombol submit -->
                 <br><br>
 
+                <!-- Tombol untuk mengirimkan form -->
+                <!-- type="submit": tombol ini akan mengirimkan data form ke server -->
+                <!-- Ketika diklik, semua data input akan dikirim sesuai atribut action dan method pada form -->
+                <!-- (action dan method tidak ada di form ini, jadi perlu ditambahkan untuk berfungsi) -->
                 <button type="submit">Kirim</button>
             </form>
         </section>
     </main>
 
+    <!-- Divider komentar untuk memisahkan footer dari main content -->
     <!-- ================= FOOTER ================= -->
+    
+    <!-- Elemen footer - bagian bawah website yang biasanya berisi copyright, links, dan informasi tambahan -->
     <footer>
-        <!-- Bagian bawah website -->
-
+        
+        <!-- Paragraf berisi pernyataan copyright (hak cipta) -->
+        <!-- &copy; adalah HTML entity untuk simbol copyright (©) -->
+        <!-- 2026 adalah tahun yang menununjukkan kapan website dibuat/diupdate -->
+        <!-- "All rights reserved" adalah klaim hak cipta standar -->
         <p>&copy; 2026 Faishal Zaky. All rights reserved.</p>
-        <!-- Copyright -->
     </footer>
 
+<!-- Penutup elemen body -->
 </body>
+
+<!-- Penutup elemen html - akhir dari dokumen HTML -->
 </html>

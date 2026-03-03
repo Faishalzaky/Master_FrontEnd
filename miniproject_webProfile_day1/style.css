@@ -1,231 +1,456 @@
+/* Divider komentar untuk memisahkan bagian reset CSS dari bagian styling lainnya */
 /* ===================== */
 /* RESET DASAR */
 /* ===================== */
 
+/* Selector universal (*) - memilih SEMUA elemen di halaman */
+/* Ini digunakan untuk me-reset margin dan padding default yang diberikan browser */
 * {
+    /* margin: 0 - menghapus jarak luar di semua sisi (default browser biasanya 8px) */
     margin: 0; 
+    
+    /* padding: 0 - menghapus jarak dalam di semua sisi (default yang sudah ada) */
     padding: 0;
+    
+    /* box-sizing: border-box - mengubah cara perhitungan ukuran elemen */
+    /* Dengan ini, padding dan border TIDAK menambah ukuran total elemen */
+    /* (default box-sizing: content-box menambah padding ke ukuran elemen) */
     box-sizing: border-box;
 }
-/* Menghapus margin & padding default browser */
-/* box-sizing agar padding tidak menambah ukuran element */
 
+/* Komentar penjelasan: menghapus margin & padding default browser untuk kontrol penuh */
+/* Komentar penjelasan: box-sizing agar padding tidak menambah ukuran element */
+
+/* Styling untuk elemen html (root element) */
 html {
+    /* scroll-behavior: smooth - membuat scroll halaman smooth/lambat saat navigasi anchor link */
+    /* Ketika klik link #about, halaman akan scroll smooth ke section tersebut */
     scroll-behavior: smooth;
 }
-/* Smooth scroll saat klik menu */
 
+/* Komentar penjelasan: Smooth scroll saat klik menu */
+
+/* Styling untuk elemen body - elemen induk dari semua konten halaman */
 body {
+    /* font-family: menentukan jenis font yang digunakan */
+    /* 'Segoe UI' adalah font utama yang modern dan bersih */
+    /* sans-serif adalah font fallback jika Segoe UI tidak tersedia di device */
     font-family: 'Segoe UI', sans-serif;
+    
+    /* line-height: 1.6 - mengatur tinggi baris teks */
+    /* 1.6 berarti tinggi baris adalah 1.6x ukuran font (membuat teks lebih mudah dibaca) */
     line-height: 1.6;
+    
+    /* background-color: #f4f6f9 - warna latar belakang halaman */
+    /* Warna abu-abu muda yang soft, tidak putih murni (lebih nyaman untuk mata) */
     background-color: #f4f6f9;
+    
+    /* color: #333 - warna teks default pada halaman */
+    /* Warna gelap (hampir hitam) yang memberikan kontras baik dengan background */
     color: #333;
 }
-/* Font modern */
-/* Background abu soft */
-/* Warna teks gelap agar kontras */
+
+/* Komentar penjelasan: Font modern */
+/* Komentar penjelasan: Background abu soft */
+/* Komentar penjelasan: Warna teks gelap agar kontras */
 
 
+/* Divider untuk bagian header */
 /* ===================== */
 /* HEADER */
 /* ===================== */
 
+/* Styling untuk elemen header - bagian atas halaman dengan logo dan menu */
 header {
+    /* background: #111827 - warna background header (abu2 gelap) */
     background: #111827;
+    
+    /* color: white - warna teks di dalam header menjadi putih */
     color: white;
+    
+    /* padding: 20px 10% - jarak internal header */
+    /* 20px untuk atas-bawah, 10% dari width untuk kiri-kanan (responsif) */
     padding: 20px 10%;
+    
+    /* display: flex - mengaktifkan flexbox layout */
+    /* Ini membuat item di dalam header bisa diatur secara fleksibel */
     display: flex;
+    
+    /* justify-content: space-between - mengatur item horizontal di header */
+    /* Nama akan di satu sisi, menu navigasi di sisi lain dengan jarak di tengah */
     justify-content: space-between;
+    
+    /* align-items: center - menyelaraskan item secara vertikal ke tengah */
+    /* Ini membuat nama dan menu sejajar tingginya secara vertikal */
     align-items: center;
+    
+    /* position: sticky - membuat header tetap terlihat saat scroll */
+    /* Sticky berbeda dengan fixed: sticky hanya melekat sampai parent element selesai */
     position: sticky;
+    
+    /* top: 0 - menentukan header melekat di paling atas saat scroll */
     top: 0;
 }
-/* Flexbox agar nama & nav sejajar */
-/* Sticky agar header tetap di atas */
 
+/* Komentar penjelasan: Flexbox agar nama & nav sejajar */
+/* Komentar penjelasan: Sticky agar header tetap di atas */
+
+/* Styling untuk heading h1 di dalam header (nama utama) */
 header h1 {
+    /* font-size: 22px - ukuran font untuk nama utama (lebih kecil dari h1 normal) */
     font-size: 22px;
 }
 
+/* Styling untuk unordered list di dalam navigation */
 nav ul {
+    /* list-style: none - menghilangkan bullet/poin dari list (default ada) */
     list-style: none;
+    
+    /* display: flex - mengaktifkan flexbox untuk list menu */
+    /* Menu akan ditampilkan horizontal bukan vertical */
     display: flex;
+    
+    /* gap: 20px - jarak antar item menu adalah 20px */
+    /* Flexbox property yang memberi ruang antara item secara merata */
     gap: 20px;
 }
-/* Menu horizontal */
 
+/* Komentar penjelasan: Menu horizontal */
+
+/* Styling untuk hyperlink (a) di dalam navigation */
 nav a {
+    /* color: white - warna teks link di navigation adalah putih */
     color: white;
+    
+    /* text-decoration: none - menghilangkan garis bawah dari link (default ada underline) */
     text-decoration: none;
+    
+    /* font-weight: 500 - ukuran ketebalan font (500 = semi-bold, lebih tebal dari normal) */
     font-weight: 500;
+    
+    /* transition: 0.3s - membuat perubahan properti smooth selama 0.3 detik */
+    /* Ini membuat efek hover menjadi smooth, bukan instant */
     transition: 0.3s;
 }
 
+/* Pseudo-class :hover - styling yang diterapkan saat mouse di atas link */
 nav a:hover {
+    /* color: #3b82f6 - warna berubah menjadi biru saat di-hover */
+    /* Memberikan feedback visual bahwa link bisa diklik */
     color: #3b82f6;
 }
-/* Hover biru modern */
+
+/* Komentar penjelasan: Hover biru modern */
 
 
+/* Divider untuk bagian hero section */
 /* ===================== */
 /* HERO SECTION */
 /* ===================== */
 
+/* Styling untuk section hero dengan id="hero" (section pembuka/selamat datang) */
 #hero {
+    /* text-align: center - memusatkan teks secara horizontal */
     text-align: center;
+    
+    /* padding: 100px 20px - jarak internal hero section */
+    /* 100px atas-bawah untuk memberikan white space vertikal, 20px kiri-kanan */
     padding: 100px 20px;
+    
+    /* background: linear-gradient(to right, #3b82f6, #6366f1) */
+    /* Membuat background gradient dari biru ke ungu dari kiri ke kanan */
+    /* Memberikan visual menarik dan modern pada section pembuka */
     background: linear-gradient(to right, #3b82f6, #6366f1);
+    
+    /* color: white - warna teks di hero section menjadi putih */
+    /* Kontras dengan background gradient yang gelap */
     color: white;
 }
 
+/* Styling untuk heading h2 di dalam hero section */
 #hero h2 {
+    /* font-size: 40px - ukuran font besar untuk tagline utama */
     font-size: 40px;
+    
+    /* margin-bottom: 20px - jarak bawah antara h2 dan paragraf berikutnya */
     margin-bottom: 20px;
 }
 
+/* Styling untuk paragraf di dalam hero section */
 #hero p {
+    /* font-size: 18px - ukuran font subtitle, lebih besar dari normal */
     font-size: 18px;
 }
 
 
+/* Divider untuk section umum */
 /* ===================== */
 /* SECTION UMUM */
 /* ===================== */
 
+/* Styling untuk semua elemen section di halaman (about, skills, projects, contact) */
 section {
+    /* padding: 60px 10% - jarak internal section */
+    /* 60px atas-bawah untuk memberi ruang vertikal, 10% kiri-kanan untuk responsif */
     padding: 60px 10%;
 }
 
+/* Styling untuk semua heading h2 di dalam section */
 section h2 {
+    /* margin-bottom: 30px - jarak bawah antara judul dan konten section */
     margin-bottom: 30px;
+    
+    /* font-size: 28px - ukuran font untuk judul section */
     font-size: 28px;
+    
+    /* text-align: center - memusatkan judul section secara horizontal */
     text-align: center;
 }
 
 
+/* Divider untuk section about */
 /* ===================== */
 /* ABOUT */
 /* ===================== */
 
+/* Styling untuk article di dalam section about */
 #about article {
+    /* max-width: 700px - lebar maksimal content tentang diri */
+    /* Membuat konten tidak terlalu lebar di layar besar */
     max-width: 700px;
+    
+    /* margin: auto - membuat article terpusat (auto left dan right margin) */
+    /* Ini push article ke tengah dengan jarak kiri-kanan otomatis */
     margin: auto;
+    
+    /* text-align: center - memusatkan teks di dalam article */
     text-align: center;
 }
 
 
+/* Divider untuk section skills */
 /* ===================== */
 /* SKILLS */
 /* ===================== */
 
+/* Styling untuk unordered list di dalam skills section */
 #skills ul {
+    /* display: flex - mengaktifkan flexbox untuk list skill */
     display: flex;
+    
+    /* justify-content: center - memusatkan skill items secara horizontal */
     justify-content: center;
+    
+    /* flex-wrap: wrap - membuat item wrap ke baris baru jika tidak cukup tempat */
+    /* Tanpa ini, item akan squeeze dan broken layout di layar kecil */
     flex-wrap: wrap;
+    
+    /* gap: 15px - jarak antar skill badge adalah 15px */
     gap: 15px;
+    
+    /* list-style: none - menghilangkan bullet point dari list */
     list-style: none;
 }
 
+/* Styling untuk list item (li) di dalam skills list */
 #skills li {
+    /* background: #3b82f6 - warna background untuk skill badge (biru) */
     background: #3b82f6;
+    
+    /* color: white - warna teks skill menjadi putih */
     color: white;
+    
+    /* padding: 10px 20px - jarak dalam badge */
+    /* 10px atas-bawah, 20px kiri-kanan (lebih lebar untuk tampak seperti badge) */
     padding: 10px 20px;
+    
+    /* border-radius: 20px - melengkungkan sudut badge seperti pill/capsule */
+    /* 20px radius membuat sudut sangat bulat (half of height), terlihat seperti tombol) */
     border-radius: 20px;
+    
+    /* transition: 0.3s - membuat perubahan smooth selama 0.3 detik */
+    /* Ketika hover, animasi akan smooth bukan instant */
     transition: 0.3s;
 }
 
+/* Pseudo-class :hover - styling saat mouse di atas skill badge */
 #skills li:hover {
+    /* transform: scale(1.1) - memperbesar skill badge menjadi 110% dari ukuran semula */
+    /* Memberikan efek interaktif yang menarik saat hover */
     transform: scale(1.1);
 }
-/* Efek membesar saat hover */
+
+/* Komentar penjelasan: Efek membesar saat hover */
 
 
+/* Divider untuk section projects */
 /* ===================== */
 /* PROJECTS */
 /* ===================== */
 
+/* Styling untuk article di dalam projects section (setiap project adalah card) */
 #projects article {
+    /* background: white - background card adalah putih (kontras dengan page background) */
     background: white;
+    
+    /* padding: 20px - jarak internal card */
     padding: 20px;
+    
+    /* margin-bottom: 20px - jarak bawah antar project card */
     margin-bottom: 20px;
+    
+    /* border-radius: 10px - melengkungkan sudut card untuk tampilan modern */
     border-radius: 10px;
+    
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.1) */
+    /* Menambahkan bayangan untuk membuat card terlihat 3D/lifted dari halaman */
+    /* 0: offset horizontal, 4px: offset vertikal, 10px: blur radius, rgba: warna shadow semi-transparent */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+    /* transition: 0.3s - membuat perubahan smooth selama 0.3 detik */
     transition: 0.3s;
 }
 
+/* Pseudo-class :hover - styling saat mouse di atas project card */
 #projects article:hover {
+    /* transform: translateY(-5px) - menggeser card naik 5px saat hover */
+    /* Memberikan efek card "terangkat" ketika dihover (card effect) */
     transform: translateY(-5px);
 }
-/* Card effect */
 
+/* Komentar penjelasan: Card effect */
+
+/* Styling untuk heading h3 di dalam project card */
 #projects h3 {
+    /* margin-bottom: 10px - jarak bawah antara judul project dan deskripsi */
     margin-bottom: 10px;
 }
 
 
+/* Divider untuk section contact */
 /* ===================== */
 /* CONTACT */
 /* ===================== */
 
+/* Styling untuk elemen form di dalam contact section */
 form {
+    /* max-width: 500px - lebar maksimal form agar tidak terlalu lebar */
     max-width: 500px;
+    
+    /* margin: auto - membuat form terpusat di halaman */
     margin: auto;
+    
+    /* display: flex - mengaktifkan flexbox layout untuk form */
     display: flex;
+    
+    /* flex-direction: column - membuat form items stack vertical (default horizontal) */
+    /* Ini membuat input, textarea, dan button berada di bawah satu sama lain */
     flex-direction: column;
 }
 
+/* Styling untuk input dan textarea di dalam form */
 form input,
 form textarea {
+    /* padding: 10px - jarak internal di dalam input field */
     padding: 10px;
+    
+    /* margin-bottom: 15px - jarak bawah setiap input/textarea untuk spacing */
     margin-bottom: 15px;
+    
+    /* border-radius: 5px - melengkungkan sudut input field sedikit */
     border-radius: 5px;
+    
+    /* border: 1px solid #ccc - menambahkan border abu-abu tipis di sekitar input */
+    /* 1px: tebal border, solid: garis solid, #ccc: warna abu-abu */
     border: 1px solid #ccc;
 }
 
+/* Styling untuk tombol submit di dalam form */
 form button {
+    /* padding: 12px - jarak internal button */
     padding: 12px;
+    
+    /* border: none - menghilangkan border default dari button */
     border: none;
+    
+    /* background: #3b82f6 - warna background button (biru) */
     background: #3b82f6;
+    
+    /* color: white - warna teks button menjadi putih */
     color: white;
+    
+    /* border-radius: 5px - sudut button sedikit lengkung */
     border-radius: 5px;
+    
+    /* cursor: pointer - mengubah cursor menjadi pointer (tangan) saat di atas button */
+    /* Memberikan indikasi visual bahwa elemen bisa diklik */
     cursor: pointer;
+    
+    /* transition: 0.3s - membuat perubahan background smooth saat hover */
     transition: 0.3s;
 }
 
+/* Pseudo-class :hover - styling saat mouse di atas button */
 form button:hover {
+    /* background: #2563eb - background button berubah ke biru yang lebih gelap saat hover */
+    /* Memberikan feedback visual bahwa button aktif/siap diklik */
     background: #2563eb;
 }
 
 
+/* Divider untuk section footer */
 /* ===================== */
 /* FOOTER */
 /* ===================== */
 
+/* Styling untuk elemen footer - bagian bawah halaman */
 footer {
+    /* background: #111827 - warna background footer (abu-abu gelap, sama dengan header) */
     background: #111827;
+    
+    /* color: white - warna teks di footer adalah putih */
     color: white;
+    
+    /* text-align: center - memusatkan teks copyright di footer secara horizontal */
     text-align: center;
+    
+    /* padding: 20px - jarak internal footer */
     padding: 20px;
 }
 
 
+/* Divider untuk responsive design */
 /* ===================== */
 /* RESPONSIVE */
 /* ===================== */
 
+/* Media query untuk layar dengan lebar maksimal 768px (tablet dan mobile) */
+/* @media (max-width: 768px) - aturan ini hanya berlaku untuk layar ≤ 768px */
 @media (max-width: 768px) {
 
+    /* Styling header untuk mobile */
     header {
+        /* flex-direction: column - mengubah arah dari row menjadi column */
+        /* Nama dan menu akan stack vertical di layar kecil */
         flex-direction: column;
+        
+        /* gap: 15px - jarak antar item (nama dan menu) menjadi 15px */
         gap: 15px;
     }
 
+    /* Styling nav ul untuk mobile */
     nav ul {
+        /* flex-direction: column - menu items akan stack vertical */
         flex-direction: column;
+        
+        /* align-items: center - memusatkan menu items secara horizontal */
         align-items: center;
     }
 
+    /* Styling h2 di hero section untuk mobile */
     #hero h2 {
+        /* font-size: 28px - mengurangi ukuran headline untuk layar kecil */
+        /* Dari 40px menjadi 28px agar tidak overflow dan tetap readable */
         font-size: 28px;
     }
 }

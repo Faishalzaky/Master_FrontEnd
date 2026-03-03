@@ -1,0 +1,94 @@
+<!-- Deklarasi tipe dokumen HTML5 - menginformasikan browser bahwa ini adalah dokumen HTML versi terbaru -->
+<!DOCTYPE html>
+
+<!-- Tag pembuka HTML dengan atribut lang="en" untuk menentukan bahwa konten dalam bahasa Inggris -->
+<html lang="en">
+<head>
+    <!-- Menentukan karakter encoding UTF-8 untuk mendukung berbagai simbol dan karakter internasional -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport meta tag untuk membuat halaman responsif di perangkat mobile dan tablet -->
+    <!-- width=device-width: lebar viewport sama dengan lebar perangkat -->
+    <!-- initial-scale=1.0: tingkat zoom awal adalah 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Judul halaman yang akan muncul di tab browser -->
+    <title>Form Me</title>
+</head>
+
+<body>
+    <!-- Judul level 2 yang ditampilkan sebagai heading utama halaman login -->
+    <h2>Login</h2>
+
+    <!-- Awal elemen form dengan metode POST untuk mengirim data (tidak ada action URL yang ditentukan) -->
+    <!-- action="#" akan disimpan sebagai referensi lokal -->
+    <!-- method="post" mengirimkan data melalui body request (lebih aman daripada GET) -->
+    <form action="#" method="post">
+
+        <!-- BAGIAN USERNAME -->
+        <!-- Label yang terhubung dengan input username melalui atribut 'for' -->
+        <label for="username">Username</label><br>
+        
+        <!-- Input teks untuk menerima nama pengguna -->
+        <!-- type="text": tipe input untuk teks biasa -->
+        <!-- id="username": identitas unik untuk elemen ini (harus unik dalam halaman) -->
+        <!-- name="username": nama yang akan dikirimkan ke server ketika form disubmit -->
+        <!-- placeholder: teks petunjuk yang menghilang ketika pengguna mulai mengetik -->
+        <!-- required: atribut validasi HTML5 untuk memastikan field tidak boleh kosong -->
+        <input 
+            type="text" 
+            id="username"
+            name="username"
+            placeholder="Masukkan username"
+            required
+        >
+        <!-- <br><br> untuk memberikan jarak vertikal antara field -->
+        <br><br>
+
+        <!-- BAGIAN PASSWORD -->
+        <!-- Label untuk field password yang terhubung melalui atribut 'for' -->
+        <label for="password">Password</label><br>
+        
+        <!-- Input untuk password -->
+        <!-- type="password": menyembunyikan karakter yang diketik (ditampilkan sebagai titik/asterisk) -->
+        <!-- id="password": identitas unik untuk field ini -->
+        <!-- name="password": nama yang dikirimkan ke server -->
+        <!-- placeholder: petunjuk untuk pengguna -->
+        <!-- required: field wajib diisi sebelum form dapat dikirim -->
+        <input 
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Masukkan password"
+            required
+        >
+        <!-- Jarak vertikal sebelum elemen berikutnya -->
+        <br><br>
+
+        <!-- BAGIAN REMEMBER ME (INGAT SAYA) -->
+        <!-- Checkbox untuk opsi remaja akun pada perangkat ini -->
+        <!-- type="checkbox": tombol pilihan yang dapat dicentang atau tidak -->
+        <!-- id="remember": identitas untuk menghubungkan dengan label -->
+        <!-- CATATAN: field ini tidak memiliki atribut 'name' sehingga tidak akan dikirim ke server -->
+        <input type="checkbox" id="remember">
+        
+        <!-- Label untuk checkbox di atas yang terhubung melalui atribut 'for' -->
+        <label for="remember">Remember Me</label>
+        
+        <!-- Jarak vertikal sebelum tombol login -->
+        <br><br>
+
+        <!-- TOMBOL LOGIN -->
+        <!-- Button untuk mengirimkan form ke server -->
+        <!-- type="submit": tombol ini akan mengirimkan form ketika diklik -->
+        <!-- Action dari form akan diproses berdasarkan atribut action dan method pada tag form -->
+        <button type="submit">Login</button>
+
+    <!-- Penutup elemen form -->
+    </form>
+
+<!-- Penutup tag body -->
+</body>
+
+<!-- Penutup tag html (akhir dokumen HTML) -->
+</html>

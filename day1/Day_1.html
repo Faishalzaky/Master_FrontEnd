@@ -1,0 +1,269 @@
+<!-- Deklarasi tipe dokumen HTML5 - memberitahu browser bahwa ini adalah dokumen HTML versi terbaru -->
+<!DOCTYPE html>
+
+<!-- Tag pembuka HTML dengan atribut lang="en" untuk menentukan bahasa dokumen (Inggris) -->
+<html lang="en">
+
+<!-- Bagian kepala (head) yang berisi metadata dan konfigurasi halaman -->
+<head>
+    <!-- Menentukan karakter encoding UTF-8 untuk mendukung berbagai simbol dan karakter internasional -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport meta tag untuk membuat halaman responsif di perangkat mobile dan tablet -->
+    <!-- width=device-width: lebar viewport sama dengan lebar perangkat -->
+    <!-- initial-scale=1.0: tingkat zoom awal adalah 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Judul halaman yang akan muncul di tab browser -->
+    <title>Study Front End Developer</title>
+
+    <!-- Awal blok style internal (CSS yang disematkan langsung dalam HTML) -->
+    <style>
+        /* Styling untuk body - elemen induk dari seluruh konten halaman */
+        body {
+            /* font-family: menentukan jenis font yang digunakan (fallback ke sistem jika Arial tidak tersedia) */
+            font-family: Arial;
+            /* margin: 0; menghilangkan margin default browser untuk memberikan kontrol penuh */
+            margin: 0;
+        }
+
+        /* Styling untuk header - bagian atas halaman yang biasanya berisi judul/logo */
+        header {
+            /* background: black; memberikan latar belakang warna hitam */
+            background: black;
+            /* color: white; mengubah warna teks menjadi putih agar kontras dengan latar belakang */
+            color: white;
+            /* padding: 20px; memberikan jarak internal 20 pixel di semua sisi */
+            padding: 20px;
+        }
+
+        /* Styling untuk navigasi - menu tautan untuk bernavigasi antar halaman */
+        nav {
+            /* background: gray; memberikan latar belakang warna abu-abu */
+            background: gray;
+            /* padding: 10px; memberikan jarak internal 10 pixel di semua sisi */
+            padding: 10px;
+        }
+
+        /* Styling untuk section - bagian utama konten halaman */
+        section {
+            /* padding: 20px; memberikan jarak internal 20 pixel di semua sisi untuk memberi ruang */
+            padding: 20px;
+        }
+
+        /* Styling untuk article - setiap artikel independen di dalam halaman */
+        article {
+            /* border-bottom: 1px solid #ccc; menambahkan garis pemisah di bawah setiap artikel */
+            border-bottom: 1px solid #ccc;
+            /* margin-bottom: 15px; memberikan jarak luar 15 pixel di bawah setiap artikel */
+            margin-bottom: 15px;
+        }
+
+        /* Styling untuk footer - bagian bawah halaman yang biasanya berisi informasi copyright */
+        footer {
+            /* background: black; memberikan latar belakang hitam */
+            background: black;
+            /* color: white; mengubah warna teks menjadi putih */
+            color: white;
+            /* text-align: center; memusatkan teks secara horizontal */
+            text-align: center;
+            /* padding: 10px; memberikan jarak internal 10 pixel */
+            padding: 10px;
+        }
+
+        /* Styling untuk tabel - elemen untuk menampilkan data dalam baris dan kolom */
+        table {
+            /* border-collapse: collapse; menghilangkan jarak antar border cell, membuat border lebih rapi */
+            border-collapse: collapse;
+            /* width: 100%; membuat tabel memenuhi seluruh lebar container */
+            width: 100%;
+        }
+
+        /* Styling untuk table header (th) dan table data (td) - cell dalam tabel */
+        th, td {
+            /* border: 1px solid black; menambahkan border hitam 1 pixel di semua sisi sel */
+            border: 1px solid black;
+            /* padding: 8px; memberikan jarak internal 8 pixel di dalam sel */
+            padding: 8px;
+            /* text-align: center; memusatkan isi sel secara horizontal */
+            text-align: center;
+        }
+
+        /* Styling khusus untuk header tabel (th) - baris judul tabel */
+        th {
+            /* background-color: #f2f2f2; memberikan latar belakang warna abu-abu muda untuk membedakan header */
+            background-color: #f2f2f2;
+        }
+    </style>
+    <!-- Akhir blok style -->
+</head>
+
+<!-- Awal tag body - di mana semua konten halaman ditampilkan -->
+<body>
+    <!-- Komentar: Menggunakan Semantic HTML5 yang memberikan makna struktural pada elemen -->
+    
+    <!-- HEADER: Bagian atas halaman yang biasanya berisi judul/logo utama -->
+    <header>
+        <!-- Judul level 1 - judul utama halaman -->
+        <h1>Portal Berita Indonesia</h1>
+    </header>
+
+    <!-- NAVIGATION: Menu navigasi dengan tautan ke berbagai bagian halaman -->
+    <nav>
+        <!-- Hyperlink ke halaman Home - href="#" adalah placeholder (akan diarahkan ke page home) -->
+        <a href="#">Home</a> |
+        <!-- Hyperlink ke kategori Teknologi -->
+        <a href="#">Teknologi</a> |
+        <!-- Hyperlink ke kategori Olahraga -->
+        <a href="#">Olahraga</a> |
+        <!-- Hyperlink ke kategori Bisnis -->
+        <a href="#">Bisnis</a>
+    </nav>
+
+    <!-- MAIN CONTENT: Bagian utama konten halaman yang berisi artikel dan media -->
+    <section>
+        <!-- Judul level 2 untuk bagian berita terbaru -->
+        <h2>Berita Terbaru</h2>
+
+        <!-- ARTIKEL 1: Elemen article untuk konten artikel independen -->
+        <article>
+            <!-- Judul level 3 untuk artikel pertama -->
+            <h3>AI Mengubah Dunia Kerja</h3>
+            <!-- Paragraf dengan deskripsi singkat tentang artikel -->
+            <p>
+                Teknologi Artificial Intelligence mulai digunakan
+                di berbagai industri modern.
+            </p>
+        </article>
+
+        <!-- ARTIKEL 2: Artikel kedua dengan struktur yang sama -->
+        <article>
+            <!-- Judul level 3 untuk artikel kedua -->
+            <h3>Startup Indonesia Berkembang Pesat</h3>
+            <!-- Paragraf dengan deskripsi singkat tentang artikel -->
+            <p>
+                Banyak startup baru muncul dengan inovasi digital.
+            </p>
+        </article>
+
+        <!-- Bagian Audio: Membedakan bagian untuk elemen media audio -->
+        <section>
+            <!-- Judul level 3 untuk bagian audio -->
+            <h3>Audio Belajar</h3>
+
+            <!-- Elemen audio untuk menampilkan pemain audio -->
+            <!-- controls: menampilkan kontrol pemain (play, pause, volume, dll) -->
+            <audio controls>
+                <!-- Tag source untuk menentukan file audio yang akan diputar -->
+                <!-- src: path ke file audio yang diinginkan -->
+                <!-- type="audio/mpeg": menentukan tipe MIME audio (format MP3) -->
+                <source src="belajar.mp3" type="audio/mpeg">
+                <!-- Pesan fallback jika browser tidak mendukung elemen audio -->
+                Browser Anda tidak mendukung audio.
+            </audio>
+
+        <!-- Bagian Video: Membedakan bagian untuk elemen media video lokal -->
+        <!-- Judul level 3 untuk bagian video tutorial -->
+        <h3>Video Tutorial</h3>
+
+        <!-- Elemen video untuk menampilkan video yang disimpan lokal -->
+        <!-- width="500": menentukan lebar video adalah 500 pixel -->
+        <!-- controls: menampilkan kontrol pemain (play, pause, volume, timeline, dll) -->
+        <video width="500" controls>
+            <!-- Tag source untuk menentukan file video yang akan diputar -->
+            <!-- src: path ke file video -->
+            <!-- type="video/mp4": menentukan tipe MIME video (format MP4) -->
+            <source src="tutorial.mp4" type="video/mp4">
+            <!-- Pesan fallback jika browser tidak mendukung elemen video -->
+            Browser Anda tidak mendukung video.
+        </video>
+
+        <!-- Bagian YouTube Embed: Menggunakan iframe untuk menampilkan konten dari website lain -->
+        <!-- iframe (inline frame) digunakan untuk menampilkan website lain atau video YouTube di halaman kita -->
+        <!-- Judul level 3 untuk bagian video YouTube -->
+        <h3>Video dari YouTube</h3>
+
+        <!-- Elemen iframe untuk embed video YouTube -->
+        <!-- width="560": menentukan lebar frame adalah 560 pixel -->
+        <!-- height="315": menentukan tinggi frame adalah 315 pixel -->
+        <!-- src: URL embed video YouTube (kode unik video berada di akhir URL) -->
+        <!-- frameborder="0": menghilangkan border di sekitar iframe -->
+        <!-- allowfullscreen: mengizinkan video untuk ditonton dalam mode fullscreen -->
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+        <!-- Penutup bagian section yang berisi semua elemen media -->
+    </section>
+
+    <!-- Bagian Tabel: Menampilkan jadwal kegiatan dalam format tabel terstruktur -->
+    <!-- Judul level 2 untuk bagian jadwal kegiatan -->
+    <h2>Jadwal Kegiatan</h2>
+
+    <!-- Elemen tabel untuk menampilkan data dalam baris dan kolom -->
+    <table>
+        <!-- thead: bagian "table head" yang berisi baris header/judul tabel -->
+        <thead>
+            <!-- tr: table row - baris dalam tabel -->
+            <tr>
+                <!-- th: table header - sel header yang berisi judul kolom -->
+                <!-- Kolom pertama: Hari -->
+                <th>Hari</th>
+                <!-- Kolom kedua: Kegiatan -->
+                <th>Kegiatan</th>
+                <!-- Kolom ketiga: Waktu -->
+                <th>Waktu</th>
+            </tr>
+        </thead>
+        
+        <!-- tbody: bagian "table body" yang berisi data baris tabel (bukan header) -->
+        <tbody>
+            <!-- BARIS 1: Data untuk Senin -->
+            <tr>
+                <!-- td: table data - sel data yang berisi informasi -->
+                <!-- Hari: Senin -->
+                <td>Senin</td>
+                <!-- Kegiatan: Belajar HTML -->
+                <td>Belajar HTML</td>
+                <!-- Waktu: 19.00 - 21.00 -->
+                <td>19.00 - 21.00</td>
+            </tr>
+
+            <!-- BARIS 2: Data untuk Selasa -->
+            <tr>
+                <!-- Hari: Selasa -->
+                <td>Selasa</td>
+                <!-- Kegiatan: Belajar CSS -->
+                <td>Belajar CSS</td>
+                <!-- Waktu: 19.00 - 21.00 -->
+                <td>19.00 - 21.00</td>
+            </tr>
+
+            <!-- BARIS 3: Data untuk Rabu -->
+            <tr>
+                <!-- Hari: Rabu -->
+                <td>Rabu</td>
+                <!-- Kegiatan: Belajar JavaScript -->
+                <td>Belajar JavaScript</td>
+                <!-- Waktu: 19.00 - 21.00 -->
+                <td>19.00 - 21.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Penutup section -->
+</section>
+
+<!-- FOOTER: Bagian bawah halaman yang berisi informasi copyright dan info tambahan -->
+<footer>
+    <!-- Paragraf yang berisi informasi copyright/hak cipta tahun 2026 -->
+    <p>© 2026 Portal Berita Indonesia</p>
+</footer>
+
+<!-- Penutup body - akhir dari semua konten halaman -->
+</body>
+
+<!-- Penutup html - akhir dokumen HTML -->
+</html>
