@@ -1,0 +1,27 @@
+.card {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(153, 52, 52, 0.15);
+}
+
+.btn-modern {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
