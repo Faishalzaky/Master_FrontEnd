@@ -1,54 +1,151 @@
-.card {
-  width: 300px;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+/* 1. SETUP VARIABLE */
+:root {
+    --accent-color: #ff4757;    /* Warna merah badge/tombol */
+    --dark-bg: #1e1e26;        /* Warna background halaman */
+    --card-white: #ffffff;
+    --text-main: #2f3542;
+    --text-muted: #a4b0be;
+    --transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(153, 52, 52, 0.15);
+/* 2. BASE STYLES */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
 }
 
-.btn-modern {
-  padding: 12px 24px;
-  border: none;
-  border-radius: 50px;
-  background: linear-gradient(45deg, #4f46e5, #7c3aed);
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
+body {
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.btn-modern:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+/* 3. CARD CONTAINER */
+.product-card {
+    background: var(--card-white);
+    max-width: 340px; /* Default Mobile */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
 }
 
-.services {
-  padding: 4rem 0;
+/* 4. IMAGE & BADGE LOGIC */
+.product-image {
+    position: relative; /* Wajib agar badge bisa melayang di dalamnya */
+    width: 100%;
+    height: 250px;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 3rem;
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.services__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+/* Desain Badge Diskon */
+.badge {
+    position: absolute; /* Melayang bebas */
+    top: 15px;
+    left: 15px;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10;
 }
 
-.card {
-  padding: 2rem;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+/* 5. CONTENT STYLING */
+.product-content {
+    padding: 25px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.category {
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 11px;
+}
+
+.title {
+    font-size: 24px;
+    margin: 8px 0;
+    color: var(--text-main);
+}
+
+.description {
+    font-size: 14px;
+    color: #57606f;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Harga */
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Tombol dengan Icon */
+.cta-button {
+    width: 100%;
+    background: var(--text-main);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px); /* Efek melompat sedikit */
+}
+
+/* 6. RESPONSIVE (DESKTOP) */
+@media (min-width: 768px) {
+    .product-card {
+        max-width: 800px;
+        flex-direction: row; /* Gambar kiri, teks kanan */
+    }
+
+    .product-image {
+        height: auto; /* Ikuti tinggi konten teks */
+        flex: 1;
+    }
+
+    .product-content {
+        flex: 1.2;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

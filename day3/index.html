@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Premium Product Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card">
-  <h3>Web Development</h3>
-  <p>Membuat website modern dan responsive.</p>
+    <main class="wrapper">
+        <article class="product-card">
+            <figure class="product-image">
+                <span class="badge">Hemat 30%</span>
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600" alt="Sepatu Lari Nike Merah">
+            </figure>
 
-  <button class="btn-modern">Daftar Sekarang</button>
-</div>
+            <section class="product-content">
+                <header>
+                    <small class="category">EDISI TERBATAS</small>
+                    <h1 class="title">Nike Air Max 270</h1>
+                </header>
+                
+                <p class="description">
+                    Rasakan sensasi berjalan di atas awan dengan teknologi Air Unit terbaru. Desain ramping untuk gaya hidup aktif.
+                </p>
 
-<section class="services">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
+                <div class="price-container">
+                    <span class="current-price">Rp 1.500.000</span>
+                    <span class="old-price">Rp 2.100.000</span>
+                </div>
 
-    <div class="services__grid">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Membangun website modern</p>
-      </div>
+                <button class="cta-button">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    Tambah ke Keranjang
+                </button>
+            </section>
+        </article>
+    </main>
 
-      <div class="card">
-        <h3>UI Design</h3>
-        <p>Design clean & modern</p>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 </html>
