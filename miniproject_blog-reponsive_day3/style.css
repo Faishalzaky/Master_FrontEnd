@@ -179,6 +179,12 @@ body {
     .card {
         flex: 1 1 calc(50% - 20px); /* 2 kolom */
     }
+
+.container img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
 }
 
 @media (max-width: 600px) {
