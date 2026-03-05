@@ -1,0 +1,159 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --accent-color: #3b82f6;
+    --secondary-text: #666666;
+    --border-color: #eeeeee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 80px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    padding: 100px 2rem 50px 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary-text);
+    max-width: 600px;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--secondary-text);
+    margin-bottom: 30px;
+}
+
+.timeline .item {
+    margin-bottom: 30px;
+}
+
+.year {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-grid span {
+    background: #f4f4f5;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.btn-contact {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: var(--text-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+.btn-contact:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}
+
+/* Responsive Mobile */
+@media (max-width: 600px) {
+    h1 { font-size: 2.2rem; }
+    nav ul { display: none; } /* Sembunyikan menu di mobile untuk simplisitas */
+}
