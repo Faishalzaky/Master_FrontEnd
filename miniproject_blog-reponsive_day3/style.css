@@ -1,0 +1,194 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #6085d4;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+}
+
+.nav-wrapper {
+    display: flex; /* FLEX */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex; /* FLEX */
+    gap: 20px;
+    list-style: none;
+    font-weight: bold;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+.nav-menu a:hover {
+    text-decoration: underline;
+    color: #0f172a;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(135deg, #467bec, #4772ff);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero img{
+    width: 100vh;
+    margin-bottom: 20px;
+    border-radius: 1rem;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.main-wrapper {
+    display: flex; /* FLEX */
+    gap: 40px;
+    margin: 60px auto;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    flex: 3; /* 75% */
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    flex: 1; /* 25% */
+}
+
+/* ===== FEATURED ===== */
+.featured {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.featured img {
+    width: 100%;
+}
+
+.featured-text {
+    padding: 20px;
+}
+
+/* ===== POST LIST ===== */
+.post-list {
+    display: flex; /* FLEX */
+    gap: 20px;
+    flex-wrap: wrap; /* Supaya responsive */
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1 1 calc(33.333% - 20px); /* 3 kolom */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    height: 50%;
+}
+
+/* ===== SIDEBAR ===== */
+.widget {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.widget a{
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.widget input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* ===== CTA ===== */
+.cta {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+
+    .main-wrapper {
+        flex-direction: column; /* FLEX */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 kolom */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        flex: 1 1 100%; /* 1 kolom */
+    }
+}
