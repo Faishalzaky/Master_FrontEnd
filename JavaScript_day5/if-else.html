@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistem Penilaian</title>
+</head>
+
+
+<style>
+    *{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: aqua;
+        background-color: black;
+        padding: 10px 20px ;
+        border-radius: 5px;
+    }
+
+    input {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: black;
+        color: aqua;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    p{
+        background-color: black;
+        padding: 10px;
+        border-radius: 5px;
+        color: aqua;
+        font-weight: bold;
+    }
+</style>
+<body>
+
+    <div class="container">
+<h2>Sistem Penilaian Siswa</h2>
+
+<input type="number" id="nilai" placeholder="Masukkan Nilai">
+<input type="number" id="kehadiran" placeholder="Masukkan Kehadiran (%)">
+<button onclick="hitung()">Hitung</button>
+
+<p id="hasil"></p>
+
+</div>
+
+<script>
+function hitung() {
+    let nilai = document.getElementById("nilai").value;
+    let kehadiran = document.getElementById("kehadiran").value;
+
+    let grade;
+    let status;
+
+    if (nilai >= 90) {
+        grade = "A";
+    } else if (nilai >= 80) {
+        grade = "B";
+    } else if (nilai >= 70) {
+        grade = "C";
+    } else if (nilai >= 60) {
+        grade = "D";
+    } else {
+        grade = "E";
+    }
+
+    if (nilai >= 70 && kehadiran >= 75) {
+        status = "Lulus";
+    } else {
+        status = "Tidak Lulus";
+    }
+
+    document.getElementById("hasil").innerHTML =
+        "Grade: " + grade + " | Status: " + status;
+}
+</script>
+
+</body>
+</html>
