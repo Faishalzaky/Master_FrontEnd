@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Shopping Cart</title>
+
+  <!-- Menghubungkan CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Simple Shopping Cart</h1>
+  </header>
+
+  <main>
+
+    <!-- FORM INPUT -->
+    <section class="form-section">
+
+      <input type="text" id="namaBarang" placeholder="Nama Barang">
+
+      <input type="number" id="hargaBarang" placeholder="Harga">
+
+      <input type="number" id="jumlahBarang" placeholder="Jumlah">
+
+      <button id="tambahBtn">Tambah</button>
+
+    </section>
+
+    <!-- TABEL LIST BARANG -->
+    <section>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Barang</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+
+        <tbody id="listBarang">
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+    <!-- TOTAL BELANJA -->
+    <section class="total-section">
+
+      <h2>Total: <span id="totalHarga">0</span></h2>
+
+      <h3>Diskon: <span id="diskon">0</span></h3>
+
+      <h2>Total Bayar: <span id="totalBayar">0</span></h2>
+
+    </section>
+
+  </main>
+
+  <!-- Menghubungkan JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
