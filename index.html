@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TechBlog - Artikel Teknologi</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+
+<div class="container nav-container">
+
+<h1 class="logo">TechBlog</h1>
+
+<nav class="nav">
+<a href="#">Home</a>
+<a href="#">Artikel</a>
+<a href="#">About</a>
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<h2>Artikel Teknologi Terbaru</h2>
+
+<p>Belajar Web Development dari dasar hingga advanced.</p>
+
+</div>
+
+</section>
+
+<section class="container search-section">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Cari artikel..."
+>
+
+</section>
+
+<main class="container">
+
+<div id="blogContainer" class="blog-grid">
+
+</div>
+
+</main>
+
+<div class="container pagination">
+
+<button id="prevBtn">Prev</button>
+
+<span id="pageInfo"></span>
+
+<button id="nextBtn">Next</button>
+
+</div>
+
+<section
+id="articleDetail"
+class="container article-detail hidden">
+
+<h2 id="detailTitle"></h2>
+
+<p id="detailContent"></p>
+
+<button onclick="backToHome()">Kembali</button>
+
+</section>
+
+<footer class="footer">
+
+<p>© 2026 TechBlog</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

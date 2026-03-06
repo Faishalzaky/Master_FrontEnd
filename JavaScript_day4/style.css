@@ -1,0 +1,149 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 10%;
+
+  background:#0f172a;
+  color:white;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+}
+
+
+/* HERO */
+
+.hero{
+  height:90vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  background:linear-gradient(#0f172a,#1e293b);
+  color:white;
+}
+
+.hero-text h2{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.hero-text p{
+  margin-bottom:20px;
+}
+
+.btn{
+  background:#38bdf8;
+  padding:10px 20px;
+  text-decoration:none;
+  color:black;
+  border-radius:5px;
+}
+
+
+/* ABOUT */
+
+.about{
+  padding:80px 10%;
+  text-align:center;
+}
+
+.about h2{
+  margin-bottom:20px;
+}
+
+
+
+/* SERVICES */
+
+.services{
+  padding:80px 10%;
+  background:#f1f5f9;
+  text-align:center;
+}
+
+.service-container{
+  margin-top:40px;
+
+  display:flex;
+  gap:20px;
+
+  justify-content:center;
+}
+
+
+.service-card{
+  background:white;
+
+  padding:30px;
+
+  border-radius:10px;
+
+  width:250px;
+}
+
+
+
+/* CONTACT */
+
+.contact{
+  padding:80px 10%;
+  text-align:center;
+}
+
+form{
+  margin-top:20px;
+
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+
+  max-width:400px;
+  margin:auto;
+}
+
+input,textarea{
+  padding:10px;
+  border:1px solid #ccc;
+}
+
+button{
+  background:#0f172a;
+  color:white;
+  border:none;
+  padding:12px;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
